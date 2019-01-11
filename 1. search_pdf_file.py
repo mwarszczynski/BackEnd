@@ -8,7 +8,7 @@ def dirThrough(text):
             if file.endswith('pdf'):
                 print(os.path.join(root, file))
 
-os.chdir('E:\\')
+os.chdir('E:\\')                    # Type any Disc name that u want to research
 currentPath = os.getcwd()
 print('\nLets search in the current directory, which is: %s\n' % currentPath)
 print(dirThrough(currentPath))
