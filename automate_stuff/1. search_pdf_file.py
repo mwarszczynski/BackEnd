@@ -1,4 +1,4 @@
-# Script that searches all .pdf files on mentioned disk
+# Script that searches all .pdf files on mentioned disk. [For now this scripts will work only on win os].
 
 import os
 
