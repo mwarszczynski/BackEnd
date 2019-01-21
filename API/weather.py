@@ -8,6 +8,12 @@ def findOverCity():
     data = res.json()
     showInfo(data)
 
+# Function search over ZIP code & country code
+#def findOverZipAndCountryCode():
+#    countryCode = input('Type Your country code here: ')
+#    countryZipCode = input('Enter Your country ZIP code: ')
+# --------------------- > to be continued < ---------------------
+
 # Function uses 'ipinfo' webpage to check the geolocation, and return info from openweather API about current weather
 def findOverCurrentLocation():
     url_location = ('https://ipinfo.io/')
