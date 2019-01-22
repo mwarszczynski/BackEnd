@@ -35,5 +35,6 @@ def saveToFile(data):
         print(e)
         pass
 
+
 print(randFunc())
 
