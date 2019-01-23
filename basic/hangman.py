@@ -1,6 +1,3 @@
-# 1. First player invents word, and write - how many char are contained
-# 2. If second player will guess the letter, first player appends this char to 'guessed'
-# 3. If quantity of guesses is equal to the number of words given to the player - break ('hangman done')
 import time
 
 password = ''           # password to guess
@@ -33,12 +30,3 @@ while i < hitCounter:
     else:
         badGuess = badGuess + 1
         print('Unfortunately, secret word does not containt "%s". Number of errors = %s.' % (x,badGuess))
-
-
-
-
-
-
-
-
-
