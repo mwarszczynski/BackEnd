@@ -1,13 +1,13 @@
 # Python
 
-#API
+- API
 	Working with various API
 	
-#automate_stuff
+- automate_stuff
 	Scripts that automate processes, tasks, various cases
 	
-#basic
+- basic
 	Excercuses with Python syntax
 
-#web_scrapping
+- web_scrapping
 	automatic tests
