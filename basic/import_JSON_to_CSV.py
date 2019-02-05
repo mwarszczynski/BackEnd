@@ -1,5 +1,4 @@
-import json
-import csv
+import json, urllib.request
 
 # json from existing in current dir file
 def JSONfromFile():
@@ -12,16 +11,17 @@ def JSONfromFile():
     with open('offer.json', 'w') as f:
         json.dump(data, f, indent = 2)
 
-# def JSONfromURL():
-#     with open('https://vimeo.com/api/v2/video/38356.json') as response:
-#         source = response.read()
-#
-#     print(source)
+# get JSON from URL
+def JSONfromURL():
+    with urllib.request.urlopen('https://ip-ranges.amazonaws.com/ip-ranges.json') as url:
+        y = url.read()
+        return y
 
-# print(JSONfromFile())
-# print(JSONfromURL())
+# save JSON to file
+# def JSONtoFile(y):
+#     with open('save_json_file.json', 'w+') as outfile:
+#         json.dump(y, outfile, ensure_ascii=False)
 
-# Next steps to do
-# 1. Finish JSONfromURL function
-# 2. Download any JSON and import to csv file
+print(JSONfromFile())
+print(JSONfromURL())
 
