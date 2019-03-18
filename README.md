@@ -3,6 +3,8 @@
 **API** - Working with various API
 
 **Automated tests** - Learning how to write unit tests and so on
+
+**Parallel_processing** - 
 	
 **automate_stuff** - Scripts that automate processes, tasks, various cases
 	
