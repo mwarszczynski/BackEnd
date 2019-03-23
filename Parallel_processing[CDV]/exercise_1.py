@@ -10,15 +10,15 @@ dict_word = {
     '9' : 'nine'
 }
 
-def read_value(x):
-    y = str()
-    for j in x:
-        if(j.isdecimal()):
-            y += dict_word[j] + ' '
-    return y
+def recieve_value(x):
+    temp = str()
+    for i in x:
+        if(i.isdecimal()):
+            temp += dict_word[i] + ' \n'
+    return temp
 
 x = input('Enter the number:\n')
 
-print(read_value(x))
+print(recieve_value(x))
 
 
