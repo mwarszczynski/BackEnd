@@ -26,7 +26,6 @@ def add_multiplied_values(number):
     else:
         print('Numer Pesel niepoprawny')
 
-# podajemy pesel
 pesel_number = input('Podaj Pesel: \n')
 
 # Przerabiamy str(pesel) do listy, zeby pozniej pomnozyc
