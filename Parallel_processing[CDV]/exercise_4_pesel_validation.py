@@ -1,7 +1,7 @@
 # wagi potrzebne do obliczenia sumy kontrolnej nr Pesel
 pesel_number_weight = ['1','3','7','9','1','3','7','9','1','3']
 mul_result = []
-# const - stała wartość pobrana ze wzoru do obliczania poprawności Peselu
+# const - stała wartość pobrana ze wzoru do obliczania poprawności numeru Pesel
 b = 10
 
 def set_as_list(number):
@@ -28,9 +28,9 @@ def add_multiplied_values(number):
 
 pesel_number = input('Podaj Pesel: \n')
 
-# Przerabiamy str(pesel) do listy, zeby pozniej pomnozyc
+# Przerabiamy str(Pesel) do listy, zeby pozniej pomnozyc
 set_as_list(pesel_number)
 # wywolujemy funkcje, ktora pomnozy wagi * pesel i wstawi wyniki w tablice
 calculate_scales(pesel_number_weight)
-# Funkcja sumuje wartosci tablicy i wylicza modulo z otrzymanego wyniku
+# Funkcja sumuje wartosci tablicy i wylicza modulo z otrzymanego wyniku, nastepnie sprawdza poprawnosc sumy kontrolnej.
 add_multiplied_values(mul_result)
