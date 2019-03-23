@@ -26,6 +26,12 @@ def add_multiplied_values(number):
     else:
         print('Numer Pesel niepoprawny')
 
+def show_basic_information(number):
+    # print('Rok urodzenia',pesel_number[0],pesel_number[1])
+    pesel_number[0:1] = [''.join(pesel_number[0:2])]
+    # print(pesel_number[0:2])
+
+
 pesel_number = input('Podaj Pesel: \n')
 
 # Przerabiamy str(Pesel) do listy, zeby pozniej pomnozyc
@@ -34,3 +40,7 @@ set_as_list(pesel_number)
 calculate_scales(pesel_number_weight)
 # Funkcja sumuje wartosci tablicy i wylicza modulo z otrzymanego wyniku, nastepnie sprawdza poprawnosc sumy kontrolnej.
 add_multiplied_values(mul_result)
+# Przedstawia dane na podstawie numeru Pesel
+show_basic_information(pesel_number)
+
+print('===',pesel_number)
