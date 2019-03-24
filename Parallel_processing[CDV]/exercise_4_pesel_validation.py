@@ -8,7 +8,6 @@ def set_as_list(number):
     global pesel_number
     print(f'Numer pesel ktory podales: "{pesel_number}".')
     pesel_number = (list(str(pesel_number)))
-    # return pesel_number
 
 def calculate_scales(number):
     for x in range(len(pesel_number_weight)):
@@ -17,9 +16,9 @@ def calculate_scales(number):
 
 def add_multiplied_values(number):
     sum_result = sum(mul_result)
-    print('Wynik zsumowania elementow listy: ',sum_result)
+    print(f'Wynik zsumowania elementow listy {sum_result}.')
     modulo_result = sum_result % b
-    print('Wynik dzielenia modulo: ',modulo_result)
+    print(f'Wynik zsumowania elementow listy {modulo_result}.')
 
     if(b - modulo_result) == int(pesel_number[10]):
         print('Numer Pesel poprawny!')
@@ -27,9 +26,17 @@ def add_multiplied_values(number):
         print('Numer Pesel niepoprawny')
 
 def show_basic_information(number):
-    # print('Rok urodzenia',pesel_number[0],pesel_number[1])
-    pesel_number[0:1] = [''.join(pesel_number[0:2])]
-    # print(pesel_number[0:2])
+    year_birth_date = ''.join(pesel_number[0:2])
+    month_birth_date = ''.join(pesel_number[2:4])
+    day_birth_date = ''.join(pesel_number[4:6])
+    what_sex_sum = int(pesel_number[6]) + int(pesel_number[7]) + int(pesel_number[8]) + int(pesel_number[9])
+
+    if what_sex_sum % 2 == 1:
+        what_sex = 'Male sex'
+    else:
+        what_sex = 'Female sex'
+
+    print(f'Your born date is {day_birth_date}.{month_birth_date}.{year_birth_date} and You are {what_sex}.')
 
 
 pesel_number = input('Podaj Pesel: \n')
@@ -42,5 +49,3 @@ calculate_scales(pesel_number_weight)
 add_multiplied_values(mul_result)
 # Przedstawia dane na podstawie numeru Pesel
 show_basic_information(pesel_number)
-
-print('===',pesel_number)
