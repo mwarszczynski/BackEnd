@@ -1,11 +1,24 @@
-from tkinter import Tk, scrolledtext, Menu, filedialog, END, messagebox
+from tkinter import Tk, scrolledtext, Menu, filedialog, END, messagebox, simpledialog
 
 # creating object, main window
 root = Tk()
 textArea = scrolledtext.ScrolledText(root, width=100, height=50)
 
-# Functions overwrite an existing file (if not exist, there will be error)
+# Functions
+def newFile():
+    # There is content?
+    if len(textArea.get('1.0', END+'-1c')) > 0:
+        if messagebox.askyesno('Save?','Do You want to save'):
+            saveFile()
+
+        else:
+            textArea.delete('1.0', END)
+
+    root.title(' - New document')
+
+# overwrite an existing file (if not exist, there will be error)
 def openFile():
+    textArea.delete('1.0', END)
     file = filedialog.askopenfile(parent=root, title='Select a text file', filetypes=(('Text file', '*.txt'), ('All files','*.*')))
 
     if file != None:
@@ -22,6 +35,25 @@ def saveFile():
         file.write(data)
         file.close()
 
+def findInFile():
+    findString = simpledialog.askstring('Find...', 'Enter text: ')
+    textData = textArea.get('1.0', END)
+
+    occurances = textData.upper().count(findString.upper())
+
+    if textData.upper().count(findString.upper()) > 0:
+        label = messagebox.showinfo('Found:', findString + 'occures' + str(occurances))
+
+    else:
+        label = messagebox.showinfo('Found:', 'No resut')
+
+    # count = 0
+
+    print(textData.upper().count(findString.upper()))
+
+    if findString.upper() in textData.upper():
+        print(True)
+
 def about():
     label = messagebox.showinfo('About', 'A Python alternative to Notepad')
 
@@ -35,9 +67,10 @@ root.config(menu=menu)
 fileMenu = Menu(menu)
 menu.add_cascade(label="File", menu=fileMenu)
 
-fileMenu.add_command(label="New")
+fileMenu.add_command(label="New", command=newFile)
 fileMenu.add_command(label="Open", command=openFile)
 fileMenu.add_command(label="Save",  command=saveFile)
+fileMenu.add_command(label="Find",  command=findInFile)
 # fileMenu.add_command(label="Save as...")
 fileMenu.add_separator()
 fileMenu.add_command(label="Page settings")
