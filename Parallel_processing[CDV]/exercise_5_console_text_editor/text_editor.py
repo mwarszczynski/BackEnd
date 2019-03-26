@@ -1,8 +1,10 @@
 from tkinter import Tk, scrolledtext, Menu, filedialog, END, messagebox, simpledialog
+from tkinter import *
 
 # creating object, main window
 root = Tk()
 textArea = scrolledtext.ScrolledText(root, width=100, height=50)
+root.configure(background='red')
 
 # Functions
 def newFile():
@@ -55,7 +57,7 @@ def findInFile():
         print(True)
 
 def about():
-    label = messagebox.showinfo('About', 'A Python alternative to Notepad')
+    label = messagebox.showinfo('About', 'Notepad created in Python.')
 
 def exitRoot():
      if messagebox.askyesno('Quit','Are You sure that You want to quit?'):
