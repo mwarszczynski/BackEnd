@@ -4,7 +4,7 @@
 
 **Automated tests** - Learning how to write unit tests and so on
 
-**Parallel_processing** - 
+**Parallel_processing** - School Homework
 	
 **automate_stuff** - Scripts that automate processes, tasks, various cases
 	
