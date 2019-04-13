@@ -8,6 +8,7 @@ Nie oczekuję drugiego Netflixa lub Spotify
 Praca w grupach
 Dokumentacja
 
+
 ## Exercices
 **Exercise_1** - Potrzebny jest program, który przekształci wprowadzony przez użytkownika ciąg cyfr na string: znaki, które nie są cyframi mają być ignorowane konwertujemy cyfry, nie liczby, a zatem: 544 to "pięć cztery cztery" 1002 to "jeden zero zero dwa"
 
@@ -54,8 +55,8 @@ Stworzenie klastra RabbitMQ;
 Przekierowanie nagłówków w HAPROXY;
 NGINX dla naszej aplikacji.
 
-## Exercices
 
+## Exercices
 **Exercise_1** - Nazwa zadania: Deployment nowego środowiska testowego
 Opis zadania: Przygotuj proszę dla nas lokalne środowisko z wykorzystaniem docker-compose, posiadające następujące serwisy:
 Serwer NGINX z php-fpm dostępny za pomocą portu 9080 oraz domeną app.localhost;
