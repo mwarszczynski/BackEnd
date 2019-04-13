@@ -4,7 +4,7 @@
 
 **Automated tests** - Learning how to write unit tests and so on
 
-**Parallel_processing[CDV]** - School Homework
+**Parallel_processing[CDV]** - DevOps Projects 
 	
 **automate_stuff** - Scripts that automate processes, tasks, various cases
 	
