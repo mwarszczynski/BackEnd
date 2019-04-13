@@ -8,6 +8,7 @@ Nie oczekuję drugiego Netflixa lub Spotify
 Praca w grupach
 Dokumentacja
 
+## Exercices
 **Exercise_1** - Potrzebny jest program, który przekształci wprowadzony przez użytkownika ciąg cyfr na string: znaki, które nie są cyframi mają być ignorowane konwertujemy cyfry, nie liczby, a zatem: 544 to "pięć cztery cztery" 1002 to "jeden zero zero dwa"
 
 **Exercise_2_konwerter** - Prawdziwy jest fakt, że woda zamarza przy 32 stopniach Fahrenheita, a wrze przy 212 stopniach Fahrenheita. Swtórz rozwiązanie "konwenter.py", który wyświetlać będzie tabelę przeliczeń stopni Celsjusza na Fahrenheita w następującym zakresie od –20 do +40 stopni Celsjusza (co 5 stopni). Pamiętaj, żeby wyświetlać znak plus/minus przy temperaturze.
@@ -52,6 +53,8 @@ Stworzenie klastra Redis;
 Stworzenie klastra RabbitMQ;
 Przekierowanie nagłówków w HAPROXY;
 NGINX dla naszej aplikacji.
+
+## Exercices
 
 **Exercise_1** - Nazwa zadania: Deployment nowego środowiska testowego
 Opis zadania: Przygotuj proszę dla nas lokalne środowisko z wykorzystaniem docker-compose, posiadające następujące serwisy:
