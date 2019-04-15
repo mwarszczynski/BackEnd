@@ -31,6 +31,7 @@ Za każdym razem jak wpisany zostanie “error” w pliku zostanie to przechwyco
 
 
 **Exercise_5** - Wykorzystując przykłady z zajęć oraz dokumentacje Pythona3 i Flask’a napisz Api posiadające następujące endpointy:
+
 /api/users -> zwraca użytkowników zdefiniowanych jako lista w aplikacji (zwraca plik json)
 /api/users/delete/<user_id> -> usuwa użytkownika z konkretnym ID
 /api/users/add/<user_id> -> tworzy nowego użytkownika na podstawie przekazanego user_id
