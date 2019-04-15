@@ -20,7 +20,7 @@ cyfry 1-2 to ostatnie dwie cyfry roku urodzenia
 cyfry 3-4 to dwie cyfry miesiąca urodzenia
 cyfry 5-6 to dwie cyfry dnia urodzenia
 cyfry 7-10 liczba porządkowa z oznaczeniem płci (liczba parzysta - kobieta, liczba nieparzysta - mężczyzna)
-cyfra 11 suma kontrolna
+cyfra 11 suma kontrolna.
 
 **Exercise_4** - Wykorzystując poznane metody na zajęciach oraz dokumentacje Pythona w wersji 3 stwórz prosty edytor tekstu w konsoli.
 Wymogi:
