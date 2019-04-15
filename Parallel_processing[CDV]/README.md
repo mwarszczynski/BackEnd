@@ -14,7 +14,9 @@ Dokumentacja
 
 **Exercise_2_konwerter** - Prawdziwy jest fakt, że woda zamarza przy 32 stopniach Fahrenheita, a wrze przy 212 stopniach Fahrenheita. Swtórz rozwiązanie "konwenter.py", który wyświetlać będzie tabelę przeliczeń stopni Celsjusza na Fahrenheita w następującym zakresie od –20 do +40 stopni Celsjusza (co 5 stopni). Pamiętaj, żeby wyświetlać znak plus/minus przy temperaturze.
 
-**Exercise_3** - Zgodnie z informacją zamieszczoną na stronach rządowych Rejestr PESEL – Powszechny Elektroniczny System Ewidencji Ludności prowadzony jest od 1979 roku i zawiera dane osób przebywających stale na terytorium RP, zameldowanych na pobyt stały lub czasowy trwający ponad 2 miesiące a także osób ubiegających się o wydanie dowodu osobistego lub osób, dla których odrębne przepisy przewidują potrzebę posiadania numeru PESEL.
+**Exercise_2_fibonaci** - 
+
+**Exercise_4** - Zgodnie z informacją zamieszczoną na stronach rządowych Rejestr PESEL – Powszechny Elektroniczny System Ewidencji Ludności prowadzony jest od 1979 roku i zawiera dane osób przebywających stale na terytorium RP, zameldowanych na pobyt stały lub czasowy trwający ponad 2 miesiące a także osób ubiegających się o wydanie dowodu osobistego lub osób, dla których odrębne przepisy przewidują potrzebę posiadania numeru PESEL.
 Budowa numeru PESEL jest następująca:
 cyfry 1-2 to ostatnie dwie cyfry roku urodzenia
 cyfry 3-4 to dwie cyfry miesiąca urodzenia
