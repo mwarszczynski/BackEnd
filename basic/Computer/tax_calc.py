@@ -1,16 +1,15 @@
 class Tax_Calc:
 
-    global smaller_tax
-    global bigger_tax
-
     def __init__(self):
         self.tax1 = 0.07
         self.tax2 = 0.23
 
+    global smaller_tax, bigger_tax, operations
+
     def amount(self):
         try:
             self.amount = float(input('Enter the amount to be taxed: '))
-            # return self.amount
+            operations(self.amount)
         except ValueError:
             print('You have to enter correct number')
 

@@ -1,5 +1,5 @@
-from space.planet import  Planet
-from space.calc import planet_mass, planet_vol
+from ninja19.planet import  Planet
+from ninja19.calc import planet_mass, planet_vol
 
 namek = Planet('Namek', 3000, 8, 'Naboo System')
 

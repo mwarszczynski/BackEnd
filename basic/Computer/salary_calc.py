@@ -9,5 +9,9 @@ class Salary_calc:
         except ValueError:
             print('You have to enter correct value')
 
-        salary = lambda x: x - (x * self.tax)
-        print('Your net earnings: ', (gross_amount))
+        result = (gross_amount * 27) / 100
+        x = gross_amount - result
+        print(x)
+
+        # salary = lambda x: x - (x * self.tax)
+        # print('Your net earnings: ', (gross_amount))
