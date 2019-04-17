@@ -2,16 +2,12 @@ from flask import Flask,jsonify
 
 app = Flask(__name__)
 
-# users = ['Michal Kowalski','Andrzej Glowacki','Leon Nowak','Roksana Ron']
-
 users ={'1':'Michal Kowalski',
         '2':'Andrzej Glowacki',
         '3':'Leon Nowak',
         '4':'Roksana Nowicka'}
 
-user_passed = {}
-
-@app.route('/users')
+@app.route('/users', methods=['POST','GET'])
 def list_current_users():
     return jsonify(users)
     print(users)
@@ -21,15 +17,15 @@ def add_user(id, name):
     users[id] = name
     return jsonify(users)
 
-# @app.route('/users/delete/<int:id>')
-# def delete_user(id):
-#     if id in users.key:
-#         return True
+@app.route('/users/delete/<string:id>')
+def delete_user(id):
+    users.pop(id, None)
+    return jsonify(users)
 
-    # users.pop(id, None)
-    # return jsonify(users)
-    # return 'User with id %d deleted' % id
-
+@app.route('/users/flush_db/')
+def flush_users():
+    for key in [key for key in users]: del users[key]
+    return jsonify(users)
 
 # @app.route('/user/<username>')
 # def show_user_profile(username):
