@@ -1,5 +1,10 @@
 import math
 
+import logging
+
+logging.basicConfig(filename='logs.log', level=logging.DEBUG,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
+
 class Complex_arithmetic_calc:
 
     def __init__(self, x=0, y=0):
@@ -29,14 +34,14 @@ class Complex_arithmetic_calc:
 
     def modulo_values(x ,y):
         result = x % y
-        print(f'{x} modulo {y} = {result}')
+        logging.debug(f'{x} modulo {y} = {result}')
 
     def root_values(x ,y):
         result1 = math.sqrt(x)
         result2 = math.sqrt(y)
-        print(f'Root of value {x} = {result1}')
-        print(f'Root of value {y} = {result2}')
+        logging.debug(f'Root of value {x} = {result1}')
+        logging.debug(f'Root of value {y} = {result2}')
 
     def power_values(x ,y):
         result = x ** y
-        print(f'{x} ** {y} = {result}')
+        logging.debug(f'{x} ** {y} = {result}')

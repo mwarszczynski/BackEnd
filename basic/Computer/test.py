@@ -1,10 +1,34 @@
-dict = {'key1': 'geeks', 'key2': 'for'}
-print("Current Dict is: ", dict)
+import re
 
-# adding dict1 (key3, key4 and key5) to dict
-dict1 = {'key3': 'geeks', 'key4': 'is', 'key5': 'fabulous'}
-dict.update(dict1)
+text_to_search = '''
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+Ha HaHa
+logs
+MetaCharacters (Need to be escaped):
+. ^ $ * + ? { } [ ] \ | ( )
+coreyms.com
+321-555-4321
+123.555.1234
+123*555*1234
+800-555-1234
+900-555-1234
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Robinson
+Mr. T
+'''
 
-# by assigning
-dict.update(newkey1='portal')
-print(dict)
+sentence = 'Start a sentence and then bring it to an end'
+
+pattern = re.compile(r'logs')
+
+matches = pattern.finditer(text_to_search)
+
+for match in matches:
+    print(match)
+
+# ^ - beginning of a string
+# $ - end of a string

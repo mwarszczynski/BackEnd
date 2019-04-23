@@ -1,3 +1,8 @@
+import logging
+
+logging.basicConfig(filename='logs.log', level=logging.DEBUG,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
+
 class Basic_arithmetic_calc:
 
     def __init__(self, x=0, y=0):
@@ -8,8 +13,8 @@ class Basic_arithmetic_calc:
     global num1, num2
 
     def operations(self):
-        num1 = int(input('Enter number: '))
-        num2 = int(input('Enter number: '))
+        num1 = float(input('Enter first number: '))
+        num2 = float(input('Enter second number: '))
 
         print('Available operations:')
         print('1. Add')
@@ -31,20 +36,20 @@ class Basic_arithmetic_calc:
 
     def add_values(self, x, y):
         result = x + y
-        print(f'{x} + {y} = {result}')
-        # return result
+        logging.debug(f'{x} + {y} = {result}')
 
     def sub_values(self, x, y):
         result = x - y
-        print(f'{x} - {y} = {result}')
-        # return result
+        logging.debug(f'{x} - {y} = {result}')
 
     def mul_values(self, x, y):
         result = x * y
-        print(f'{x} * {y} = {result}')
-        # return result
+        logging.debug(f'{x} * {y} = {result}')
 
     def div_values(self, x, y):
-        result = x / y
-        print(f'{x} / {y} = {result}')
-        # return result
+        try:
+            result = x / y
+        except ZeroDivisionError:
+            logging.exception('Tried to divide zero')
+        else:
+            return result
