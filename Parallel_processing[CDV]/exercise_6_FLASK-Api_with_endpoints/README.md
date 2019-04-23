@@ -1,3 +1,3 @@
-flask.app - using JSON file
+**flask.app** - using JSON file
 
-flask2.app - using sqlalchemy
+**flask2.app** - using sqlalchemy
