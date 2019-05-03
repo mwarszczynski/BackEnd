@@ -1,13 +1,14 @@
-import requests
 import os
 
+import requests
+
 # Function search the City that You enter, and return info from openweather API about current weather
-def findOverCity():
+def find_over_city():
     yourCity = input('Pass Your City : ')
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=7ea290f5bb54f4d7562ae933a868a038'.format(yourCity)
     res = requests.get(url)
     data = res.json()
-    showInfo(data)
+    show_info(data)
 
 # Function search over ZIP code & country code
 #def findOverZipAndCountryCode():
@@ -16,7 +17,7 @@ def findOverCity():
 # --------------------- > to be continued < ---------------------
 
 # Function uses 'ipinfo' webpage to check the geolocation, and return info from openweather API about current weather
-def findOverCurrentLocation():
+def find_over_current_location():
     url_location = ('https://ipinfo.io/')
     res = requests.get(url_location)
     data = res.json()
@@ -27,22 +28,22 @@ def findOverCurrentLocation():
     url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=7ea290f5bb54f4d7562ae933a868a038&units=metric'.format(latitude, longitude)
     res = requests.get(url)
     data = res.json()
-    showInfo(data)
+    show_info(data)
 
 # This is summary function, which is concludes all information downloaded from openweather API
-def showInfo(data):
+def show_info(data):
     currentTemperature = data['main']['temp']
     windSpeed = data['wind']['speed']
     currentPressure = data['main']['pressure']
 
     print('Current temperature : ', currentTemperature)
-    print('Wind speed: {} m/s'.format(windSpeed))
+    print('Wind speed: ', windSpeed, 'm/s')
     print('Current pressure: ', currentPressure)
 
-    print(weatherFile(data))
+    print(weather_file(data))
 
 # Function saving the result of the weather in mentioned file.
-def weatherFile(data):
+def weather_file(data):
     weatherLog = os.getcwd()
 
     try:
@@ -62,9 +63,9 @@ def main():
     choice = input('Type Your choice : ')
 
     if choice == '1':
-        findOverCity()
+        find_over_city()
     elif choice == '2':
-        findOverCurrentLocation()
+        find_over_current_location()
     else:
         print('Invalid...')
 
