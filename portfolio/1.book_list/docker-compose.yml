@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  env-manager:
+    build: .
+    hostname: flaskapp
+    container_name: manager
+    depends_on:
+      - env-db
+    ports:
+      - 0.0.0.0:80:5000
+  env-db:
+    image: mysql:5.7
+    hostname: db
+    container_name: db
+    environment:
+      MYSQL_DATABASE: "STX"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_ROOT_PASSWORD: "secret"
+
+      
