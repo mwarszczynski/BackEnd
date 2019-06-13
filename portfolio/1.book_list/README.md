@@ -1,15 +1,15 @@
 # Project assumptions
 
 **Subject** Create web page (with API), which allows user to:
-            * adding own book to existing database
-            * Listing allow books over title / author
-            * importing file: 
-                - User can import all books with their data to:
-                  - CSV
-                  - XML
-                  - TXT
-                  - PDF
-            * Log in to adminisrator account (if he/they have)
+- adding own book to existing database
+- Listing allow books over title / author
+- importing file: 
+- User can import all books with their data to:
+* CSV
+* XML
+* TXT
+* PDF
+- Log in to adminisrator account (if he/they have)
 
 
 **Technologies** - Used technologies:
