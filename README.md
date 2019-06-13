@@ -11,3 +11,5 @@
 **basic** - Excercuses with Python syntax
 
 **web_scrapping** - automatic tests
+
+**portfolio** - portfolio projects
