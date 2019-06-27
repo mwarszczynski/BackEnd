@@ -1,44 +1,33 @@
+import os
 from flask import Flask
-
 from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:secret@env-db/STX'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
-
-books_authors = db.Table('BooksAuthors',
-    db.Column('user_id', db.Integer, db.ForeignKey('book.book_id')),
-    db.Column('author_id', db.Integer, db.ForeignKey('authors.author_id'))
-    )
+from app.config import Config
+# from flask_bcrypt import Bcrypt
+# from flask_bcrypt import *
+# from flask_login import LoginManager
 
 
-class Book(db.Model):
-    book_id = db.Column(db.Integer, primary_key = True)
-    title = db.Column(db.String(20), unique=False)
-    bk = db.relationship('Authors', secondary=books_authors, backref=db.backref('subscribers', lazy='dynamic'))
-
-    def __init(self, title):
-        self.title = title
-        
-
-class Authors(db.Model):
-    author_id = db.Column(db.Integer, primary_key = True)
-    first_name = db.Column(db.String(20), unique=False)
-
-    def __init(self, first_name):
-        self.first_name = first_name
+db = SQLAlchemy()
+# bcrypt = Bcrypt(app)
+# login_manager = LoginManager(app)
 
 
-class Category(db.Model):
-    category_id = db.Column(db.Integer, primary_key = True)
-    species = db.Column(db.String(20), unique=False)
+def create_app(config_class=Config):
+    app = Flask(__name__)
+    app.config.from_object(Config)
 
-    def __init(self, species):
-        self.species = species
+    db.init_app(app)
+    # with app.app_context():
+    # Extensions like Flask-SQLAlchemy now know what the "current" app
+    # is while within this block. Therefore, you can now run........
+        # db.create_all()
 
+    from app.users.routes import users
+    from app.main.routes import main
+    from app.errors.handlers import errors
 
-from app import views
-from app import admin_views
+    app.register_blueprint(users)
+    app.register_blueprint(main)
+    app.register_blueprint(errors)
+
+    return app

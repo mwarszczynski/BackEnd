@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Export book{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center">Export book</h1>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Export one of the items to CSV</p>
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Select book</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
