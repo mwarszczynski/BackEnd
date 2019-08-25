@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}List of books{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center">List of books!</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <table class="table table-hover table-striped table-dark">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- {% for book in books %} -->
+          <!-- {% for author in authors %} -->
+          <tr>
+            {% for book in books %}
+            <td class="col-1">{{ book.id }}</td>
+            <td class="col-4">{{ book.title }}</td>
+            {% endfor %}
+
+            {% for author in authors %}
+            <td class="col-4">{{ author.name }}</td>
+            {% endfor %}
+
+            {% for category in categories %}
+            <td class="col-3">{{ category.species }}</td>
+            {% endfor %}
+          </tr>
+          <!-- {% endfor %} -->
+          <!-- {% endfor %} -->
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

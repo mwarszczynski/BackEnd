@@ -1,0 +1,21 @@
+{
+    "cars": [{
+            "id": 1,
+            "model": "Audi",
+            "production_year": 2019,
+            "available": "true"
+        },
+        {
+            "id": 2,
+            "model": "Mercedes",
+            "production_year": 2018,
+            "available": "false"
+        },
+        {
+            "id": 3,
+            "model": "BMW",
+            "production_year": 2019,
+            "available": "true"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Add book{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center">Added book</h1>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h4>Added position:</h4>
+      <p>Book: <b>{{ book.title }}</b>.</p>
+      <p>Author: <b>{{ author.name }}</b>.</p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

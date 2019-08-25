@@ -1,0 +1,299 @@
+Starting Jedi Python language engine.
+
+Linter 'pylint' is not installed. Please install it or select another linter".
+Error: Module 'pylint' not installed.
+
+Linter 'pylint' is not installed. Please install it or select another linter".
+Error: Module 'pylint' not installed.
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+-----------------------------------
+Your code has been rated at 7.22/10
+
+##########Linting Output - pylint##########
+************* Module run
+1,0,error,no-name-in-module:No name 'create_app' in module 'app'
+
+------------------------------------
+Your code has been rated at -2.50/10
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 7.22/10 (previous run: 7.22/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+-----------------------------------
+Your code has been rated at 8.00/10
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 7.22/10 (previous run: 7.22/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 7.22/10 (previous run: 7.22/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.00/10 (previous run: 8.00/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 7.22/10 (previous run: 7.22/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.15/10 (previous run: 7.22/10, -1.07)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.30/10 (previous run: 6.15/10, +0.14)
+
+##########Linting Output - pylint##########
+************* Module app.models
+20,0,error,syntax-error:invalid syntax (<unknown>, line 20)
+##########Linting Output - pylint##########
+************* Module app.models
+20,0,error,syntax-error:invalid syntax (<unknown>, line 20)
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.30/10, +0.26)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.08/10 (previous run: 8.00/10, +0.08)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+30,0,error,syntax-error:invalid syntax (<unknown>, line 30)
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+31,12,error,undefined-variable:Undefined variable 'flask'
+46,12,error,undefined-variable:Undefined variable 'flash'
+
+------------------------------------------------------------------
+Your code has been rated at 4.83/10 (previous run: 8.08/10, -3.25)
+
+##########Linting Output - pylint##########
+************* Module app
+1,0,error,import-error:Unable to import 'flask'
+2,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+-----------------------------------
+Your code has been rated at 3.33/10
+
+##########Linting Output - pylint##########
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.28/10 (previous run: 4.83/10, +3.45)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.28/10 (previous run: 8.28/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.28/10 (previous run: 8.28/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.28/10 (previous run: 8.28/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.28/10 (previous run: 8.28/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module commands
+1,0,error,syntax-error:invalid syntax (<unknown>, line 1)
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.33/10 (previous run: 8.28/10, +0.06)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.48/10 (previous run: 8.33/10, +0.15)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+24,0,error,function-redefined:function already defined line 14
+
+------------------------------------------------------------------
+Your code has been rated at 6.97/10 (previous run: 8.48/10, -1.52)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+24,0,error,function-redefined:function already defined line 14
+
+------------------------------------------------------------------
+Your code has been rated at 6.97/10 (previous run: 6.97/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module commands
+1,0,error,syntax-error:invalid syntax (<unknown>, line 1)
+##########Linting Output - pylint##########
+************* Module app
+1,0,error,import-error:Unable to import 'flask'
+2,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 3.33/10 (previous run: 3.33/10, +0.00)
+
+##########Linting Output - pylint##########
+##########Linting Output - pylint##########
+************* Module app
+1,0,error,import-error:Unable to import 'flask'
+2,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 3.33/10 (previous run: 3.33/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app
+1,0,error,import-error:Unable to import 'flask'
+2,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 3.33/10 (previous run: 3.33/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module commands
+1,0,error,syntax-error:invalid syntax (<unknown>, line 1)
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+24,0,error,function-redefined:function already defined line 14
+
+------------------------------------------------------------------
+Your code has been rated at 6.97/10 (previous run: 6.97/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.48/10 (previous run: 6.97/10, +1.52)
+
+##########Linting Output - pylint##########
+************* Module app.models
+2,0,error,import-error:Unable to import 'flask'
+3,0,error,import-error:Unable to import 'flask_sqlalchemy'
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+
+##########Linting Output - pylint##########
+************* Module app.main.routes
+1,0,error,import-error:Unable to import 'flask'
+
+------------------------------------------------------------------
+Your code has been rated at 8.33/10 (previous run: 8.48/10, -0.15)
+

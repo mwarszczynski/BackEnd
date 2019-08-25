@@ -1,0 +1,20 @@
+[2019-07-14 23:24:34.250] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/User'
+[2019-07-14 23:24:36.244] [renderer1] [error] connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock: Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:24:37.885] [renderer1] [error] connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock: Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:24:38.472] [renderer1] [error] Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:24:39.808] [renderer1] [error] net::ERR_NAME_NOT_RESOLVED: Error: net::ERR_NAME_NOT_RESOLVED
+[2019-07-14 23:24:49.163] [renderer1] [warning] UNRESPONSIVE extension host, 'Zignd.html-css-class-completion' took 96% of 1458.124ms, saved PROFILE here: '/tmp/exthost-5bb1b8.cpuprofile' [{"id":"gc","total":8623,"percentage":1},{"id":"program","total":19863,"percentage":1},{"id":"self","total":25278,"percentage":2},{"id":"Zignd.html-css-class-completion","total":1402803,"percentage":96}]
+[2019-07-14 23:24:59.470] [renderer1] [warning] UNRESPONSIVE extension host, 'formulahendry.docker-explorer' took 58% of 3667.698ms, saved PROFILE here: '/tmp/exthost-f9a50e.cpuprofile' [{"id":"formulahendry.docker-explorer","total":2132277,"percentage":58},{"id":"program","total":1294021,"percentage":35},{"id":"self","total":139785,"percentage":4},{"id":"Zignd.html-css-class-completion","total":100690,"percentage":3}]
+[2019-07-14 23:25:10.476] [renderer1] [warning] UNRESPONSIVE extension host, 'formulahendry.docker-explorer' took 74% of 1717.449ms, saved PROFILE here: '/tmp/exthost-8dd138.cpuprofile' [{"id":"formulahendry.docker-explorer","total":1272490,"percentage":74},{"id":"gc","total":157091,"percentage":9},{"id":"program","total":184834,"percentage":11},{"id":"self","total":93885,"percentage":5},{"id":"vscode.git","total":7990,"percentage":0}]
+[2019-07-14 23:29:38.483] [renderer1] [error] Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:33:18.913] [renderer1] [error] connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock: Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:33:22.781] [renderer1] [error] connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock: Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:33:22.843] [renderer1] [error] Error: connect ENOENT /home/michal/mwarszczynski/git_repo/Python/portfolio/2.auction_checker/~/.vscode-root/1.36.0-shared.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1113:14)
+[2019-07-14 23:33:22.916] [renderer1] [error] net::ERR_NAME_NOT_RESOLVED: Error: net::ERR_NAME_NOT_RESOLVED

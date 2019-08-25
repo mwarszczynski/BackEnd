@@ -1,0 +1,5 @@
+.vscode
+sql_db
+venv
+my_sqls.py
+.env
