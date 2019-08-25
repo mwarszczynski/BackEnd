@@ -1,15 +1,15 @@
 # Python
 
-**API** - Working with various API
+**1. API** - Working with various API
 
-**Automated tests** - Learning how to write unit tests and so on
+**2. Automated tests** - Learning how to write unit tests and so on
 
-**Parallel_processing[CDV]** - DevOps Projects 
+**5. Parallel_processing** - DevOps+Py Projects 
 	
-**automate_stuff** - Scripts that automate processes, tasks, various cases
+**3. Automate Stuff** - Scripts that automate processes, tasks, various cases
 	
-**basic** - Excercuses with Python syntax
+**4. Basic** - Excercises with Python syntax
 
-**web_scrapping** - automatic tests
+**6. Web Scrapping** - Automatic tests
 
-**portfolio** - portfolio projects
+**7. Portfolio** - Portfolio projects
