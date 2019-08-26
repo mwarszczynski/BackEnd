@@ -1,1281 +1,34 @@
-# num_var = 5
-# limit_var = 10
-#
-# def first_function():
-#     print('Iteracja po ' + str(limit_var) + ' liczbach')
-#     for x in range(limit_var):
-#         print(x)
-#     if x == num_var:
-#         print(f'x rowne {x}')
-#     else:
-#         print('')
-#
-# first_function()
-
-# def print_word(word):
-#     print(word)
-#
-# print_word('Siemka')
-
-
-
-
-
-'''* and ** technics'''
-# def parametr_args(argument, *args):
-#     print(f'zawartosc args: {args}')
-#     print(f'argument nazwany: {argument}')
-#     for arg in args:
-#         print(f'argument z *args: {arg}')
-#
-#
-# def parametr_kwargs(argument, **kwargs):
-#     print(f'argument: {argument}')
-#     print(f'zawartosc kwargs: {kwargs}')
-
-
-
-
-'''enum'''
-# parametr_args('python', 'spam', 'eggs', 'test')
-# parametr_kwargs(dodatkowy=48, nastepny=111, argument=12)
-
-# def print_args_second(*args):
-#     i = 0
-#     for arg in args:
-#         print(f'{i}. {arg}')
-#         i += 1
-#
-#
-# def print_args(*args):
-#     for index, value in enumerate(args, 1):
-#         print(f'{index}. {value}')
-
-
-# print_args('apple', 'banana', 'carrot')
-# print_args_second('apple', 'banana', 'carrot')
-
-
-
-
-
-# grocery = ['bread','milk','butter']
-# enumerateGrocery = enumerate(grocery)
-#
-# print(type(enumerateGrocery))
-# print(list(enumerateGrocery))
-#
-# enumerateGrocery = enumerate(grocery, 10)
-# print(list(enumerateGrocery))
-#
-# for count, item in enumerate(grocery, 11):
-#     print(count, item)
-
-
-
-
-# def example(*args, **kwargs):
-#     for count, value in enumerate(args, 1):
-#         print(f'{count}. {value}')
-#
-#     for item, value in kwargs.items():
-#         # print(item, value)
-#         print(f'{item} = {value}')
-#
-# example('bmw','audi', cena=500, jakos=800)
-
-
-
-
-
-# def print_default_value(fruit, vegetable='carrot', **kwargs):
-#     print(f'Fruit is {fruit}')
-#     print(f'Vegetable is {vegetable}')
-#     for name, value in kwargs.items():
-#         print(f'{name} is {value}')
-#
-#
-# print_default_value('apple', 'bow', meat='bacon', other='ham')
-
-
-
-
-
-# '''CZESTE OPERACJE NA TYPACH DANYCH'''
-# dishes = {
-#     'eggs': 2,
-#     'sausage': 1,
-#     'bacon': 3,
-#     'spam': 500
-# }
-#
-# for val in dishes.values():
-#     print(val)
-#
-#
-# for key in dishes.keys():
-#     print(key)
-#
-#
-# for val, key in dishes.items():
-#     print(val, key)
-
-
-
-
-
-
-
-# class Car:
-#     mark = ''
-#     model = ''
-#     color = ''
-#
-# cars = []
-#
-# print('Passing empty values, break writing')
-# while True:
-#     mark = input('Type mark >')
-#     model = input('Type model >')
-#     color = input('Type a color >')
-#
-#     if not (mark and model and color):
-#         break
-#
-#     car = Car()
-#     car.mark = mark
-#     car.model = model
-#     car.color = color
-#     cars.append(car)
-#
-# for idx, car in enumerate(cars):
-#     print(f'{idx+1}. {car.mark} {car.model} {car.color}')
-#     # print('{}. {} {} {}'.format(idx + 1, car.mark, car.model, car.color))
-
-
-
-
-
-# import pdb
-#
-# def add(x, y):
-#     sum = x + y
-#     return sum
-#
-#
-# if __name__ == '__main__':
-#     x = int(input('Num 1: '))
-#     y = int(input('Num 2 : '))
-#     pdb.set_trace()
-#     z = add(x, y)
-#     print(z)
-
-
-
-
-
-''' COMPREHENSIONS '''
-# mul values
-# result = [n**2 for n in range(10) if n % 2 == 1]
-# print(result)
-#
-# result_mul = [n for n in range(10)]
-# print(result_mul)
-
-
-# input_list = [1, 2, 3, 4, 5, 6, 7]
-#
-# output_dict = {}
-#
-# for var in input_list:
-#     if var % 2 == 0:
-#         output_dict[var] = var**2
-#
-# print(output_dict)
-#
-#
-# dict_using_comp = [var ** 2 for var in input_]
-
-
-
-
-# ''' LAMBDA '''
-# x = lambda a: a + 10
-# print(x(5))
-#
-# y = lambda x,y: x + y
-# print(y(2,3))
-#
-# u = lambda q,w,e: (q**2 + w) / e
-# print(u(3,3,2.5))
-#
-#
-# data = [{
-#     'name': 'Book',
-#     'price': '10',
-# }, {
-#     'name': 'Phone',
-#     'price': '20',
-# }]
-#
-# ss = sorted(data, key=lambda x: x['name'])
-# print(ss)
-
-
-
-
-
-
-''' GENERATORY - YIELD '''
-# def numbers():
-#     for i in range(11):
-#         yield i * 2
-#
-# for odd in numbers():
-#     print(odd)
-
-
-
-
-# def gen_parzyste(N):
-#     for i in range(N):
-#         if i % 2 == 0:
-#             yield i
-#
-# gen = gen_parzyste(10)
-# next(gen)
-# next(gen)
-# list(gen)
-
-
-
-# def squares():
-#     x = 1
-#     while True:
-#         yield x
-#         yield x**2
-#         x = x + 1
-#
-# sq = squares()
-# for x in range(100):
-#     # import pdb; pdb.set_trace()
-#     print("number %s" % next(sq))
-#     print("square %s" % next(sq))
-
-
-
-'''Potegowanie na 3 sposoby'''
-
-'''1 - non pythonic'''
-# def pow(num):
-#     result = num ** num
-#     return result
-
-# print(pow(2))
-
-'''2 - pythonic, compression'''
-# my_nums = [x*x for x in [1,2,3,4]]
-#
-# for num in my_nums:
-#     print(num)
-#
-# print(list(my_nums))
-
-'''2 - Using generators'''
-# def square_numbers(nums):
-#     for i in nums:
-#         yield (i*i)
-#
-# my_nums = square_numbers([1,2,3,4])
-#
-# for num in my_nums:
-#     print(num)
-
-
-'''Iterators & Generators repeat'''
-# for i in [1,2,3,4,5]:
-#     print(i)
-#
-# for key in {'x':1, 'y':2}:
-#     print(key)
-#
-# for line in open('a.txt'):
-#     print(line)
-#
-# x = iter([1,2,3])
-# print(x)
-# print(x.next())
-
-
-
-# def integers():
-#     """Infinite sequence of integers."""
-#     i = 1
-#     while True:
-#         yield i
-#         i = i + 1
-#
-# def squares():
-#     for i in integers():
-#         yield i * i
-#
-# def take(n, seq):
-#     """Returns first n values from the given sequence."""
-#     seq = iter(seq)
-#     result = []
-#     try:
-#         for i in range(n):
-#             result.append(seq.next())
-#     except StopIteration:
-#         pass
-#     return result
-#
-# print(take(5, squares())) # prints [1, 4, 9, 16, 25]
-
-
-
-'''Strings repeat'''
-# new_str = 'Test string'
-#
-# print(new_str[0])
-# print(new_str[0:3])
-# print(new_str[2:])
-# print(new_str * 2)
-# print(new_str + 'TEST')
-
-
-
-# my_list = ['first', 2, 88.3, 'another']
-#
-# print(my_list[0])
-# print(len(my_list))
-# print(my_list[1:3])
-# print(my_list[2:])
-# print(my_list * 2)
-# print(my_list + ['Dodana wartosc'])
-
-
-
-'''Dicts repeat'''
-# my_dict = {}
-# my_dict['one'] = 'This is one'
-# my_dict[2] = 'This is two'
-#
-# second_dict = {'name': 'Bond', 'code': 0.07}
-#
-#
-# print(my_dict['one'])
-# print(my_dict[2])
-# print(my_dict.get(2))
-# print(second_dict.keys())
-# print(second_dict.values())
-#
-# second_dict.update({'before': 3})
-#
-# del second_dict['name']
-#
-# for key, value in enumerate(second_dict.items()):
-#     print(f'{key}: {value}')
-
-
-
-
-
-
-'''Tuples repeat'''
-# tup1 = ('physics', 'chemistry', 1997, 2000)
-# tup2 = (1,2,3,4,5,6,7,8)
-#
-# print('tup[0]', tup1[0])
-# print('tup[1:5]', tup1[1:5])
-
-# tup3 = (12, 34.56)
-# tup4 = ('abc', 'xyz')
-#
-# sum_tup = tup3 + tup4
-# print(sum_tup)
-
-
-
-
-'''Set   PRZERÓB !!!!!!!!!!!!!!!!!!!!!!!!!!'''
-# set_a = set([1,2,3])
-# set_a = {1,2,3}
-#
-# set_b = frozenset([2,3,4])
-# set_a.add(123)
-#
-# print(set_a)
-
-
-
-
-
-
-'''Define a func'''
-# def print_args(*args):
-#     for index, value in enumerate(args):
-#         print(f'{index} {value}')
-#
-# print(print_args('ewelina','michal'))
-#
-#
-# def print_kwargs(**kwargs):
-#     for name, value in enumerate(kwargs):
-#         print(f'{name} {value}')
-#
-# print(print_kwargs(fruit='banana', vegetable='carrot'))
-
-
-
-
-
-
-
-
-'''Losuje 6 unikatowych liczb'''
-# from random import choice
-#
-# results = set()
-#
-# while len(results) < 6 :
-#     results.add(choice(range(0, 49)))
-#
-# for x in results:
-#     print(sorted(x))
-
-# import random
-#
-# results = set()
-#
-# for count in range(1, 7):
-#     randomed_value = random.randint(1, 49)
-#     results.add(randomed_value)
-#
-# for x in results:
-#     print(x)
-
-
-
-
-
-
-
-'''ALPHABET EXERCISE'''
-# def show_alphabet_second_letter():
-#     z = 65
-#     for x in range(z, 122, 2):
-#         print(z,chr(x))
-#         z+=1
-#
-#
-# def show_alphabet():
-#     y = 97
-#     while y < 123:
-#         print(chr(y))
-#         y+=1
-#
-#
-# def show_alphabet_mapped_in_list():
-#     spam = list(map(chr, range(97, 123)))
-#     return spam
-
-
-# print(show_alphabet_second_letter())
-# print(show_alphabet())
-# print(show_alphabet_mapped_in_list())
-
-
-
-
-
-
-
-
-
-'''PALINDROME'''
-# def is_palindrome(palindrome_word):
-#     if palindrome_word == palindrome_word[::-1]:
-#         return True
-#     else:
-#         return False
-
-
-# print(is_palindrome('kajak'))
-
-
-
-
-
-
-
-'''FILTER'''
-# number_list = range(-5, 5)
-# less_than_zero = list(filter(lambda x: x < 0, number_list))
-# print(less_than_zero)
-#
-#
-# list_second = [1,2,3,4, 4.5]
-# more_than_two = list(filter(lambda y: y > 2, list_second))
-# print(more_than_two)
-
-
-
-import re
-
-# my_string = 'abc$d#e'
-# valids = re.sub(r'[^A-Za-z]+', '', my_string)
-#
-# print(valids)
-
-
-
-
-
-# bigger_values = []
-# lower_values = []
-#
-# def filter_list(var, n):
-#     for i in range(len(var)):
-#         if len(var[i]) > n:
-#             lower_values.append(var[i])
-#         else:
-#             bigger_values.append(var[i])
-#
-#
-# names_list = ['michael', 'john', 'harry', 'hermiona', 'mundungus']
-# filter_list(names_list, len(names_list))
-
-# print(bigger_values)
-# print(lower_values)
-
-
-
-
-
-'''comprehensions'''
-# def get_numbers():
-#     numbers = [i for i in range(1, 101)]
-#     return numbers
-#
-#
-# def get_numbers_even():
-#     numbers = [x for x in range(1, 101) if x % 2 == 0]
-#     return numbers
-
-# print(get_numbers())
-# print(f'Even numbers >\n {get_numbers_even()}')
-
-
-
-
-
-
-'''Sequence'''
-# result = [letter for letter in 'Michal']
-# print(result)
-
-# All elements which can be iterated through
-
-
-
-
-
-
-'''Dict comprehension'''
-# iterator = {key: value for key, value in enumerate('abcde')}
-# print(iterator)
-
-
-import string
-
-# print(string.ascii_letters)
-# print(string.ascii_lowercase)
-# print(string.ascii_uppercase)
-# print(string.digits)
-# print(string.hexdigits)
-# print(string.whitespace)
-# print(string.punctuation)
-
-
-
-
-
-# result = [letter for letter in string.ascii_letters]
-# print(result)
-
-
-
-
-# alphabet = string.ascii_letters
-# result = {}
-# result = {key: value for key, value in enumerate(alphabet)}
-#
-# print(alphabet)
-
-
-
-
-
-# x = ord('A')
-# y = ord('a')
-# print(x)
-# print(y)
-# print(ord('ć'))
-#
-# print('CHR function\n')
-#
-# k = chr(65)
-# print(k)
-# print(chr(97))
-
-# letter_count = {}
-# z = 97
-# for y in range(z, 123):
-#     print(z, chr(y))
-#     z+=1
-
-
-
-
-
-# words_list = ['Kokon', 'Piramida', 'Yerba', 'Rododendron', 'Jednokomorkowiec', 'Pigwa', 'Ul']
-# word_list_short = []
-# words_list_long = []
-#
-# def shorter_words(var, n):
-#     for i in range(len(var)):
-#         if len(var[i]) < 5:
-#             word_list_short.append(var[i])
-#         else:
-#             words_list_long.append(var[i])
-#
-#
-# def shorter_words_comprehension(var):
-#     result = [word_list_short.append(var[i]) for i in range(len(var)) if len(var[i]) < 5]
-#     return result
-#
-# # shorter_words(words_list, len(words_list))
-# shorter_words_comprehension(words_list)
-#
-# print(word_list_short)
-# print(words_list_long)
-
-
-
-
-
-
-
-
-'''LAMBDA'''
-# result = [i for i in range(1, 51)]
-# print(result)
-
-
-
-# items = [1,2,3,4]
-# squared = []
-#
-# for item in items:
-#     squared.append(item*2)
-#
-# print(squared)
-#
-#
-#
-# squared = list(map(lambda x: x**2, items))
-
-
-
-
-'''function'''
-# def salary(euros):
-#     return euros * 2
-#
-# new_salary = list(map(salary, gross_list))
-# print(new_salary)
-
-
-# listaa = []
-# for i in range(1, 51):
-#     listaa.append(i)
-#
-# print(list(map(lambda x: x*x, listaa)))
-
-
-
-
-# x = [2,3,4,5,6]
-#
-# y = [v * v for v in x]
-# print(y)
-
-
-
-# x = [2,3,4,5,6]
-# y = map(lambda v: v * v, x)
-#
-# print(list(y))
-
-
-
-# x = [2,3,4,5,6]
-# y = []
-#
-# for v in x:
-#     if v % 2 == 0:
-#         y += [v * 5]
-# assert x == [2,3,4,5,6]
-# assert y == [15, 25]
-
-
-
-
-
-# x = [2,3,4,5,6]
-#
-# y = map(lambda v: v * 5, x)
-#
-# k = map(lambda v: v * 5, filter(lambda u : u % 2, x))
-#
-# print(list(y))
-# print(list(k))
-
-
-
-
-
-
-
-'''GENERATORS - YIELD'''
-# def squares():
-#     x = 1
-#     while True:
-#         yield x
-#         yield x ** 2
-#         x = x + 1
-#
-# sq = squares()
-# for x in range(100):
-#     print('number %s' % next(sq))
-#     print('square %s' % next(sq))
-
-
-
-
-
-
-
-
-
-'''DIR, CALLABLE, GETATTR'''
-# class Person:
-#     age = 23
-#     name = "Adam"
-#
-# person = Person()
-# print('The age is:', getattr(person, "age"))
-# print('The age is:', person.age)
-
-
-
-
-
-
-
-
-'''NEXT'''
-# class Car:
-#     def __int__(self, model, color):
-#         self.model = model
-#         self.color = color
-#
-#     def driving(self):
-#         print('Car is driving!')
-#
-#
-# def show_all_allow_attr_meth(obj):
-#     print('All allow methods and attributes:\n', dir(obj))
-#
-#     if callable(obj) == True:
-#         print(f'{obj} is callable')
-#     else:
-#         print('Not callable')
-#
-#
-# print(show_all_allow_attr_meth(Car))
-
-
-
-
-
-
-
-
-
-
-
-'''Show all methots and docstring'''
-# import mymodule
-#
-# print(help(mymodule))
-#
-# def my_function():
-#     """Do nothing, but document it.
-#
-#     No, really, it doesn't do anything.
-#     """
-#     pass
-#
-# print(my_function.__doc__)
-
-
-
-
-
-
-
-
-# my_list = [2,3,5,7,11]
-#
-# squared_numbers = [x**2 for x in my_list]
-# print(squared_numbers)
-#
-# squared_numbers_dict = {x**2 for x in my_list}
-# print(squared_numbers_dict)
-#
-# my_list = [[10,20,30],[40,50,60],[70,80,90]]
-#
-# flattened = [x for temp in my_list for x in temp]
-# print(flattened)
-
-
-
-
-
-# mul = lambda a,b : a * b
-# print(mul(2,5))
-
-# def myWrapper(n):
-#     return lambda a : a * n
-#
-# mulFive = myWrapper(5)
-# print(mulFive(2))
-
-
-
-
-
-
-
-# from copy import copy, deepcopy
-#
-# list_1 = [1,2,3,4,5]
-#
-# #shallow copy
-# list_2 = copy(list_1)
-# list_2[3] = 7
-# list_2[2].append(6)
-#
-# print(list_2)
-# print(list_1)
-
-# l2 = 1,2,3,7,5
-# l2 = 1,2,6,3,7,5
-
-
-
-
-
-
-# func = lambda a, b : (a ** b)
-# print(func(float(10),20))
-# print(func)
-
-
-# list1 = ['s', 'r', 'a', 's']
-# list2 = ['a', 'a', 'n', 'h']
-#
-# x = ["".join([i, j]) for i, j in zip(list1, list2)]
-#
-# print(x)
-
-
-
-
-# list1 = [3,4,5,2,1,0]
-# list1.pop(1)
-# print(list1)
-
-
-
-
-
-
-
-
-
-# Loop through a range of number
-# If numbers / 3 => 'fizz'
-# elif numbers / 5 => 'buzz'
-# elif numbers / 3 & / 5 => 'fizbuzz'
-
-# for x in range(1, 101):
-#     if x % 3 == 0 and x % 5 == 0:
-#         print('fizzbuzz')
-#     if x % 3 == 0:
-#         print('fizz')
-#     elif x % 5 == 0:
-#         print('buzz')
-#     else:
-#         print(x)
-
-
-
-# Fibonacci
-# each next is sum of previous two
-# a, b = 0, 1
-#
-# for x in range(0, 10):
-#     print(a)
-#     a, b = b, a + b
-
-
-
-
-
-
-
-
-'''OOP'''
-
-# class Hero(object):
-#     def __int__(self, name):
-#         self.name = name
-#
-#     def reveal_identity(self):
-#         print(f'My name is {self.name}.')
-#
-#
-# class SuperHero(Person):
-#     def __int__(self, name, hero_name):
-#         super(SuperHero, self).__init__(name)
-#         name.hero_name = hero_name
-#
-#     def reveal_identity(self):
-#         super(SuperHero, self).reveal_identity()
-#         print('... And I am {}'.format(self.hero_name))
-#
-#
-# corey = Person('Corey')
-# corey.reveal_identity()
-#
-# wade = SuperHero('Wade Wilson', 'Deadpool')
-# wade.reveal_identity()
-
-
-
-
-
-
-
-# def genssquares(n):
-#     for i in range(n):
-#         yield i ** 2
-#
-# # for i in genssquares(4):
-# #     print(i, end=' : ')
-#
-# x = genssquares(4)
-#
-# print(x)
-# # print(next(x))
-# # print(next(x))
-# # print(next(x))
-# # print(next(x),"\n")
-
-
-
-
-
-
-
-# def gen():
-#     for i in range(10):
-#         x = yield i
-#         print(x)
-#
-# g = gen()
-# print(next(g))
-# print(g.send(11))
-# print(g.send(22))
-
-
-
-
-
-
+# 1.)
+'''https://www.practicepython.org/exercise/2014/01/29/01-character-input.html'''
 
-
-
-# x = ['kot', 'pies', 'kuna']
-#
-# a, b, c = x
-# print('a = ' + str(a))
-# print('b = ' + str(b))
-# print('c = ' + str(c))
-#
-# print(a)
-# print(b)
-# print(c)
-
-
-
-
-
-
-# def f(wa=1, wb=1):
-#     def g(a, b):
-#         return a * wa + b * wb
-#     return g
-#
-# f(1,3)
-# wazona = f(0,1)
-# print(wazona(1,2))
-
-
-
-
-# arr = [-3,2,1,4]
-# x = arr.sort(reverse=True)
-# print(x)
-
-
-
-
-# f= lambda a, b: a - b
-# print(f(1,2))
-
-
-
-# def whatdoido():
-#     a, b = 0, 1
-#     while True:
-#         yield a
-#         a, b = b, a + b
-#
-#
-# print(whatdoido())
-
-
-
-
-
-
-
-
-# arr = [0,1,2,3,4,5]
-# new = []
-#
-# for a in arr:
-#     new.append('A' + str((a)))
-#
-#
-# newest = ['A' + str(a) for a in arr]
-#
-# print(new)
-# print(newest)
-
-
-
-
-
-
-
-
-# arr = [0,13,4,2,11]
-#
-# x = sum([1 for a in arr if a % 2 == 0])
-# print(x)
-
-
-
-
-# splitted = ['to', 'jest', 'krotki', 'text', 'nie', 'na', 'temat']
-#
-# big = [x[0].upper() + x[1:] for x in splitted]
-#
-# print(big)
-#
-#
-#
-#
-# for x in splitted:
-#     bigger = x[0].upper() + x[1:]
-#     print(bigger)
-
-
-
-
-
-# def topten():
-#
-#     n = 1
-#
-#     while n <= 10:
-#         sq = n * n
-#         yield sq
-#         n += 1
-#
-# values = topten()
-#
-# for i in values:
-#     print(i)
-
-
-
-
-# from random import randint
-#
-# def rzuty_az_wystapi(k):
-#     while True:
-#         rzut = randint(1, 6)
-#         if rzut != k:
-#             yield rzut
-#         else:
-#             break
-#
-#
-# print(list(rzuty_az_wystapi(1)))
-
-
-
-
-
-
-
-
-
-def generator():
-    yield 1
-    yield 2
-    yield 8
-
-# for i in generator():
-#     print(i)
-
-
-# x = generator()
-# print(next(x))
-# print(next(x))
-# print(next(x))
-# print(next(x))
-
-
-
-
-
-
-# def generator2(a, b):
-#     while a <= b:
-#         yield a
-#         a += 3
-#
-# for i in generator2(2, 10):
-#     print(i)
-#
-#
-# print('----PETLA----')
-#
-#
-# def iteruj(a, b):
-#     result = []
-#     while a <= b:
-#         result.append(a)
-#         a += 3
-#     return result
-#
-# for i in iteruj(2, 10):
-#     print(i)
-
-
-
-
-
-
-
-
-
-# def odwroc(dane):
-#     for i in range(len(dane)-1, -1, -1):
-#         yield dane[i]
+# name = input('Pass Your name > ')
+# age = int(input('Pass Your age > '))
+# x_copy = int(input('Pass any number > '))
 #
-# for i in odwroc('kukulka'):
-#     print(i, end='')
-
-
-
-
-
-
-# def fib(n):
-#     if n in(0, 1):
-#         return n
-#     else:
-#         return fib(n-1) + fib(n-2)
+# what_age = (2019 - age) + 100
 #
-# print(fib(35))
-
-
+# for i in range(x_copy):
+#     print(f'{name} will be 100 years old in year {what_age}\n')
 
 
 
+# 2.)
+'''https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html'''
 
-
-
-
-
-
-# 1) Create decorator
-# def all_data(func):
-#     def wrapper(name):
-#         print('Twoje imie:')
-#         func(name)
-#         print('.')
-#     return wrapper
-#
-#
-# @all_data
-# def my_name(name):
-#     print(f'My name is {name}.')
-#
-# my_name('Michal')
-
-
-
-# 2) Create caching function, which will run some computation and return cached value.
-# from functools import lru_cache
-#
-# @lru_cache(maxsize=3)
-# def fib(n):
-#     if n < 2:
-#         return n
-#     return fib(n-1) + fib(n-2)
+# number = int(input('Type number > '))
 #
-# print([fib(n) for n in range(10)])
-
-
-
-
-
+# if number % 2 == 0:
+#     print('Odd')
+# else:
+#     print('Even')
 
 
-# https://www.practicepython.org/
 
 # 3.)
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = []
+'''https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html'''
+
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# b = []
 
 # for num in a:
 #     if num < 5:
@@ -1301,32 +54,270 @@ b = []
 
 
 
+# 4.)
+'''https://www.practicepython.org/exercise/2014/02/26/04-divisors.html'''
 
-
-# number = int(input('Enter number > '))
+# divs = []
 #
-# if number % 2 == 0:
-#     print(number)
+# number = int(input('Type a number > '))
+#
+# x = list(range(1, number+1))
+#
+# for n in x:
+#     if n % 2 == 0:
+#         divs.append(n)
+#
+# print(divs)
 
 
+
+# 5.)
+'''https://www.practicepython.org/exercise/2014/03/05/05-list-overlap.html'''
+
+# Using sets
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+# all_values = set()
+#
+# for i in a:
+#     all_values.add(i)
+#
+# for j in b:
+#     all_values.add(j)
+#
+# result = list(all_values)
+#
+# print(result)
+
+# Using lists
+# a = range(random.randint(1,20))
+# b = range(random.randint(10, 40))
+#
+# c = []
+#
+# for num in a:
+#     if num in b and num not in c:
+#         c.append(num)
+#
+# print(c)
+
+
+
+
+#6.)
+'''https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html'''
+
+# any_word = str(input('Enter the string > '))
+# result = list(any_word)
+#
+# x = result[::-1]
+# print(x)
+
+
+# print(any_word[::-1])
+
+
+# any_word = str(input('Enter the string > '))
+# if any_word[::-1] == any_word:
+#     print('It is a palindrome')
+# else:
+#     print('It is not a palindrome')
+
+
+
+# 7.)
+'''https://www.practicepython.org/exercise/2014/03/19/07-list-comprehensions.html'''
+# a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+#
+# result = [num for num in a if num % 2 == 0]
+# print(result)
+
+
+
+# 8.)
+'''https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html'''
+# Rock > Scissors
+# Scissors > Paper
+# Paper > Rock
+# def whos_win(arg1, arg2):
+#         if arg1 == arg2:
+#             return('Its a deuce')
+#         elif arg1 == 1:
+#             if arg2 == 2:
+#                 return (f'{user_1} use {options.get(1)} and {user_2} use {options.get(2)}.\nThe winner is: {user_1}')
+#             elif arg2 == 3:
+#                 return (f'{user_1} use {options.get(1)} and {user_2} use {options.get(3)}.\nThe winner is: {user_2}')
+#
+#         elif arg1 == 2:
+#             if arg2 == 1:
+#                 return (f'{user_1} use {options.get(2)} and {user_2} use {options.get(1)}.\nThe winner is: {user_2}')
+#             elif arg2 == 3:
+#                 return (f'{user_1} use {options.get(2)} and {user_2} use {options.get(3)}.\nThe winner is: {user_1}')
+#
+#         elif arg1 == 3:
+#             if arg2 == 1:
+#                 return (f'{user_1} use {options.get(3)} and {user_2} use {options.get(1)}.\nThe winner is: {user_1}')
+#             elif arg2 == 2:
+#                 return (f'{user_1} use {options.get(3)} and {user_2} use {options.get(2)}.\nThe winner is: {user_2}')
+#
+#         else:
+#             return ('Uncorrect value, please try again')
+#
+#
+# user_1 = (input('Enter Your name > '))
+# user_2 = (input('Enter Your name > '))
+#
+#
+# options = {1: 'Rock', 2: 'Scissors', 3: 'Paper'}
+#
+# while True:
+#     try:
+#         usr_command = input('Enter Your command\n"quit" = break loop | "Press Enter" continue\n')
+#         if usr_command == 'quit':
+#             break
+#         else:
+#             user_1_answer = int(input(f'Which one do You want to choose {user_1} > '))
+#             user_2_answer = int(input(f'Which one do You want to choose {user_2} > '))
+#             print(whos_win(user_1_answer, user_2_answer))
+#             print(f'\nYou have these options:\n{options}.')
+#     except ValueError:
+#         print('Oops, sth go wrong')
+#         break
+
+
+
+# 9.)
+'''https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html'''
+
+# import random
+#
+# guess_count = 0
+# number = random.randint(0, 10)
+#
+# while True:
+#     user_quess = int(input('Please guess the number > '))
+#     if user_quess < number:
+#         print('To Low')
+#     elif user_quess > number:
+#         print('To High')
+#     else:
+#         print('Good shot')
+#         break
+#     guess_count+=1
+#     print('Counting: ', guess_count)
+
+# print('Counter: ', guess_count)
+
+
+
+# 10.)
+'''https://www.practicepython.org/exercise/2014/04/10/10-list-overlap-comprehensions.html'''
+
+# import random
+#
+# a = random.sample(range(1,30), 10)
+# b = random.sample(range(1,30), 15)
+#
+# result = [i for i in set(a) if i in b]
+# print(result)
+
+
+
+
+'''https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html'''
+# 11.)
+# NOT FINISH
+# def is_number_prime(arg1):
+#     if arg1 < 1:
+#         return 'This number is not prime'
+#     elif arg1 % 2 == 0:
+#         return 'This number is prime'
+#
+# number = int(input('Type a number > '))
+# print(is_number_prime(number))
+
+
+
+# 12.)
+'''https://www.practicepython.org/exercise/2014/04/25/12-list-ends.html'''
+
+# a = [5, 10, 15, 20, 25]
+#
+# def list_ends(a):
+#     return [a[0], a[len(a)-1]]
+#
+# def list_ends2(a):
+#     return [a[0], a[-1]]
+#
+# print(list_ends(a))
+# print(list_ends2(a))
+
+
+
+# 13.)
+'''https://www.practicepython.org/exercise/2014/04/30/13-fibonacci.html'''
+
+
+
+# 14.)
+'''https://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html'''
+
+# numbers = [1,2,3,3,3,'kokon',5]
+# removed_items = []
+# # second = set(numbers)
+# #
+# # print(second)
+#
+#
+# def remove_duplicates_1(arg1):
+#     removed_item = set(arg1)
+#     return removed_item
+#
+# def remove_duplicates_2(arg1):
+#     for i in arg1:
+#         if i not in removed_items:
+#             removed_items.append(i)
+#     return removed_items
+#
+# print(remove_duplicates_1(numbers))
+# # remove_duplicates_1(numbers)
+#
+# print(remove_duplicates_2(numbers))
+# remove_duplicates_2(numbers)
+
+
+
+# 15.)
+'''https://www.practicepython.org/exercise/2014/05/21/15-reverse-word-order.html'''
+
+# long_string = str((input('Enter long string with multiple words > ')))
+#
+# def reverse_string(arg1):
+#     y = arg1.split()
+#     result = []
+#     for word in y:
+#         result.insert(0, word)
+#     return result
+#
+# print(reverse_string(long_string))
 
 
 # 16.)
-import string
-import random
+'''https://www.practicepython.org/exercise/2014/05/28/16-password-generator.html'''
 
-# def pw_gen(size = 8, chars=string.ascii_letters + string.digits + string.punctuation):
-# 	return ''.join(random.choice(chars) for _ in range(size))
+# import random
 #
-# # print(pw_gen(int(input('How many characters in your password?'))))
+# all_chars = 'abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?'
+# pass_len = 8
 #
+# randomed_pswd = []
 #
+# for i in range(pass_len):
+#     result = random.choice(all_chars)
+#     randomed_pswd.append(result)
 #
-# def randoming_pswd(length = 8, chars=string.digits + string.punctuation + string.ascii_letters):
-#     return ''.join(random.choice(chars) for i in range(length))
-#
-# print(randoming_pswd())
-
+# print(randomed_pswd)
 
 
 # import random
@@ -1344,11 +335,185 @@ import random
 
 
 
+# 17.)
+'''https://www.practicepython.org/exercise/2014/06/06/17-decode-a-web-page.html'''
 
-# 17.) # w WOLLNEJ CHWILI
+
+
+# 18.)
+'''https://www.practicepython.org/exercise/2014/07/05/18-cows-and-bulls.html'''
+
+# --- DOKONCZ ---
+# import random
+#
+# x = random.randint(1000,9999)
+# print(x)
+#
+# print(type(x))
+#
+# user_guess = int(input('Enter the number > '))
+#
+# print(type(user_guess))
+# #
+# if user_guess[0] == x[0]:
+#     print('Good')
 
 
 
+# 19.)
+'''https://www.practicepython.org/exercise/2014/07/14/19-decode-a-web-page-two.html'''
+
+
+
+# 20.)
+'''https://www.practicepython.org/exercise/2014/11/11/20-element-search.html'''
+
+numbers = [1,2,3,4,5,6,7]
+num = 9
+#
+# def function1(list, x):
+#     for i in list:
+#         if x in list:
+#             return True
+#         return False
+#
+# print(function1(numbers, num))
+
+# def function2(list, number):
+#     for element in list:
+#         if element == number:
+#             return True
+#         return False
+#
+# print(function2(numbers, num))
+
+
+
+# 21.)
+'''https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html'''
+
+
+
+# 22.)
+'''https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html'''
+
+# with open('some.txt', 'r') as f:
+#     line = f.readline()
+#     while line:
+#         print(line)
+#         line = f.readline()
+
+
+# counter_dict = {}
+# counter = 0
+#
+# with open('some.txt') as file_open:
+#     line = file_open.readline()
+#     while line:
+#         print(line)
+#         line = file_open.readline()
+#         counter+=1
+#         print('Counter: ', counter)
+
+
+# counter_dict = {}
+# counter = 0
+#
+# with open('some.txt', 'r') as f:
+#     line = f.readline()
+#     while line:
+#         line = line.strip()
+#         if line in counter_dict:
+#             counter_dict[line] += 1
+#         else:
+#             counter_dict[line] = 1
+#         line = f.readline()
+#
+# print(counter_dict)
+
+
+
+# string = '  xoxo love xoxo \n kokoko   '
+#
+# print(string.strip())
+
+
+# with open('some.txt', 'r') as f:
+#     data = f.read()
+#
+# print(data)
+#
+#
+#
+# with open('some.txt', 'r') as f:
+#     for line in f.readlines():
+#         print(line, end='')
+#     #     for line in f:
+#     #         print(line, end='')
+
+# print(f)
+
+
+
+# f = open('some2.txt')
+# print(list(f))
+
+# counter_dict = {}
+#
+# with open('some.txt', 'r') as f:
+#     for line in f:
+#         counter_dict.update(line)
+#         print(counter_dict)
+
+
+
+# 23.)
+'''https://www.practicepython.org/exercise/2014/12/14/23-file-overlap.html'''
+
+
+
+# 24.)
+'''https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html'''
+
+
+
+# 25.)
+'''https://www.practicepython.org/exercise/2015/11/01/25-guessing-game-two.html'''
+
+
+
+# 26.)
+'''https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html'''
+
+
+
+#27.)
+'''https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html'''
+
+
+
+# 28.)
+'''https://www.practicepython.org/exercise/2016/03/27/28-max-of-three.html'''
+
+def max_num(arg1, arg2, arg3):
+    if (arg1 > arg2) and (arg1 > arg3):
+        print(f'Max value is {arg1}')
+    elif (arg2 > arg1) and (arg2 > arg3):
+        print(f'Max value is {arg2}')
+    elif (arg3 > arg1) and (arg3 > arg2):
+        print(f'Max value is {arg3}')
+    else:
+        print('Numbers are equal')
+
+val1 = int(input('Type number 1 > '))
+val2 = int(input('Type number 2 > '))
+val3 = int(input('Type number 3 > '))
+
+print(max_num(val1, val2, val3))
+
+
+# 29.)
+'''https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html'''
 
 
 
@@ -1437,36 +602,34 @@ import random
 #     find_date()
 
 
-import json
-
-birthday = {}
-
-def add_date():
-    name = str(input('Enter the name > '))
-    date_born = (input('Enter the date of born > '))
-    birthday[name] = date_born
-
-    with open('birthdays_1.json', 'w') as f:
-        birthday[name] = json.dump(birthday, f)
-
-def find_date():
-    name = str(input('Enter the name You are looking for > '))
-
-    try:
-        if birthday[name]:
-            print(f'The "{name}" were born in {birthday[name]}.')
-    except KeyError:
-        print(f'The "{name}" does not exist in our database.')
-
-if __name__ == '__main__':
-
-    with open('birthdays_1.json', 'r') as f:
-        birthday = json.load(f)
-
-    find_date()
-    add_date()
-
-
+# import json
+# 
+# birthday = {}
+# 
+# def add_date():
+#     name = str(input('Enter the name > '))
+#     date_born = (input('Enter the date of born > '))
+#     birthday[name] = date_born
+# 
+#     with open('birthdays_1.json', 'w') as f:
+#         birthday[name] = json.dump(birthday, f)
+# 
+# def find_date():
+#     name = str(input('Enter the name You are looking for > '))
+# 
+#     try:
+#         if birthday[name]:
+#             print(f'The "{name}" were born in {birthday[name]}.')
+#     except KeyError:
+#         print(f'The "{name}" does not exist in our database.')
+# 
+# if __name__ == '__main__':
+# 
+#     with open('birthdays_1.json', 'r') as f:
+#         birthday = json.load(f)
+# 
+#     find_date()
+#     add_date()
 
 
 
@@ -1488,29 +651,43 @@ if __name__ == '__main__':
 
 
 
+# result = []
+#
+# string = input('Enter sth > ')
+# string_splitted = string.split()
+#
+# for word in string_splitted:
+#     result.insert(0, word)
+#
+#
+# print(string_splitted)
 
 
 
+# long_string = str((input('Enter long string with multiple words > ')))
+#
+# def reverse_string(arg1):
+#     reversed = arg1.split()
+#     reversed.reverse()
+#     return ' '.join(reversed)
+#
+# print(reverse_string(long_string))
 
 
 
+# numList = ['1', '2', '3', '4']
+# seperator = ', '
+#
+# print(seperator.join(numList))
+#
+#
+# numTuple = ('1', '2', '3', '4')
+# print(seperator.join(numTuple))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''DO ZROBIENIA'''
-# Użyj dict comprehension i modulu string aby uzyskac slownik zawierajacy wszystkie litery alfabetu jako
-# klucze i ich kody ascii jako wartosci (uzyj funkcji ord)
-
-# letter_count = {chr(i+96): i for i in range(1,27)}
-# print(letter_count)
+# def reverse_v3(x):
+#   y = x.split()
+#   return " ".join(reversed(y))
+#
+#
+# test1 = input("Enter a sentence: ")
+# print(reverse_v3(test1))
