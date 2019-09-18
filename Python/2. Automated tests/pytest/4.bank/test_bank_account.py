@@ -1,26 +1,56 @@
+# -*- coding: utf-8 -*-
+
 import pytest
-from wallet import Wallet, InsufficientAmount
+from wallet import AccountBalance, InsufficientAmount
+
+@pytest.fixture
+def account():
+    '''Returns an account instance with a zero balance'''
+    return AccountBalance()
+
+@pytest.mark.parametrize('deposit, withdraw, expect', [
+    (300, 100, 200),
+    (200, 20, 180),
+    (150.5, 150.5, 0)
+])
+def test_transaction(account, deposit, withdraw, expect):
+    account.deposit_money_to_account(deposit)
+    account.withdraw_money_from_account(withdraw)
+    assert account.balance == expect
 
 
-def test_default_initial_amount():
-    wallet = Wallet()
-    assert wallet.balance == 0
+# ========== Simpliest version ==========
+# # Tworzenie konta - stan początkowy
+# def test_default_initial_amount():
+#     account = AccountBalance()
+#     assert account.balance == 0
+#
+# # Tworzenie konta - + bonus za założenie
+# def test_setting_initial_amount():
+#     account = AccountBalance(100)
+#     assert account.balance == 100
+#
+# # WPŁATA GOTÓWKI
+# def test_deposit_money_to_account():
+#     account = AccountBalance(1000)
+#     account.deposit_money_to_account(9000)
+#     assert account.balance == 10000
+#
+# # WYPŁATA GOTÓWKI
+# def test_withdraw_money_from_account():
+#     account = AccountBalance(100)
+#     account.withdraw_money_from_account(90)
+#     assert account.balance == 10
+#
+# # PRZELEW OD KOGOŚ
+# def test_get_transfer_money():
+#     account = AccountBalance(1000)
+#     account.get_transfer_money(400)
+#     assert account.balance == 1400
+#
+# # PRZELEW DO KOGOŚ
+# def test_send_transfer_money():
+#     account = AccountBalance(1000)
+#     account.send_transfer_money(1000)
+#     assert account.balance == 0
 
-def test_setting_initial_amount():
-    wallet = Wallet(100)
-    assert wallet.balance == 100
-
-def test_wallet_add_cash():
-    wallet = Wallet(10)
-    wallet.add_cash(90)
-    assert wallet.balance == 100
-
-def test_wallet_spend_cash():
-    wallet = Wallet(20)
-    wallet.spend_cash(10)
-    assert wallet.balance == 10
-
-def test_wallet_spend_cash_raises_exception_on_insufficient_amount():
-    wallet = Wallet()
-    with pytest.raises(InsufficientAmount):
-        wallet.spend_cash(100)
